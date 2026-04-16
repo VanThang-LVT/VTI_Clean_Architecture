@@ -2,7 +2,7 @@
 
 Dự án này là một ví dụ minh họa về việc áp dụng **Clean Architecture** và **Domain-Driven Design (DDD)** trong một ứng dụng Spring Boot sử dụng cấu trúc Multi-module Maven.
 
-## 🏗 Kiến trúc dự án
+## Kiến trúc dự án
 
 Dự án được chia thành các module riêng biệt để đảm bảo tính độc lập và dễ bảo trì:
 
@@ -14,7 +14,7 @@ Dự án được chia thành các module riêng biệt để đảm bảo tính
 
 ---
 
-## 🚀 Luồng hoạt động (Execution Flow)
+## Luồng hoạt động
 
 Khi một yêu cầu (Request) được gửi đến hệ thống, nó sẽ đi qua các lớp sau:
 
@@ -26,44 +26,7 @@ Khi một yêu cầu (Request) được gửi đến hệ thống, nó sẽ đi 
 
 ---
 
-## 🛠 Công nghệ sử dụng
-
-- **Java 11**
-- **Spring Boot 2.3.1**
-- **Maven** (Multi-module)
-- **Spring Data JPA** (H2/Database persistence)
-- **Logback** (Logging)
-
----
-
-## 📂 Cấu trúc thư mục chính
-
-```text
-├── Application (Main app & Config)
-├── AuthServer (Security)
-├── Controller (REST Endpoints)
-├── Domain (Core Logic, Entities, Repo Interfaces)
-├── Service (Business Implementation)
-└── pom.xml (Parent POM)
-```
-
----
-
-## 📖 Cách chạy dự án
-
-1. Đảm bảo bạn đã cài đặt JDK 11 và Maven.
-2. Build toàn bộ dự án từ thư mục gốc:
-   ```bash
-   mvn clean install
-   ```
-3. Chạy ứng dụng từ module `Application`:
-   ```bash
-   mvn spring-boot:run -pl Application
-   ```
-
----
-
-## 🛡 Đặc điểm Clean Architecture
+## Đặc điểm Clean Architecture
 - **Độc lập Framework**: Mặc dù có phụ thuộc vào Spring JPA trong Domain (theo hướng thực dụng), nhưng cấu trúc tổng thể giúp bạn dễ dàng thay đổi các thành phần giao diện hoặc DB mà không ảnh hưởng đến logic lõi.
 - **Dễ kiểm thử**: Các logic trong Domain và Service có thể được Unit Test một cách độc lập.
 - **Tường minh**: Mỗi module có một trách nhiệm duy nhất.
